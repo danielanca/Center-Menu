@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet"> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <title>Mobile Menu</title>
+        <link rel="stylesheet" href="slicknav.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet"> 
+        <style>
+           body{background-color: white;  }
+            .inner_main_menu {margin: 0 auto; width: auto; display: grid; grid-template-columns: 2fr auto 2fr;}    
+             #menu-left{margin: 0 0 0 0; padding: 20px 0 0; display: flex;  justify-content: flex-end;}    
+             #menu-right{margin: 0 0 0 0; padding: 20px 0 0; display: flex;  justify-content: flex-start; } 
+             #image_pfir{
+                display: flex;
+                justify-content: center;
+                height: 10vw;
+                padding: 0px 0 0;
+                /* background-image: url(florin_irimia.png); */
+            }
+            .inner_main_menu ul li{float: right; display: grid; position: relative; }    
+            .inner_main_menu ul li:nth-child(1){float: left;}    
+            .inner_main_menu ul li:nth-child(2){float: left;}    
+            .inner_main_menu ul li:nth-child(3){float: left;}    
+            .inner_main_menu ul li a{color: #262626; font-size: 1.6vw; text-transform: uppercase;text-decoration: none; display: block;padding: 10px 3vw; font-family: 'Work Sans', sans-serif;}    
+            .inner_main_menu ul li a:hover{color: #6FDA44}  
+            .inner_main_menu ul li ul{position: absolute; top: 40px; left: -9999999px; width: 200px;background: #262626; padding: 0;}  
+            .inner_main_menu ul li:hover ul{left: 0px;}   
+            .inner_main_menu ul li ul li{float: left;width: 100%;text-align: left;}  
+            .inner_main_menu ul li ul li a{color: #fff;text-transform: capitalize; font-size: 15px;}  
+            .inner_main_menu ul li ul li a:hover{background: #ddd; color: #262626;}  
+            .inner_main_menu ul li ul li ul{top: 0; left: -999999px;}  
+            .inner_main_menu ul li:hover ul li ul{top: 0; left: -999999px;}  
+            .inner_main_menu ul li ul li:hover ul{top: 0; left: 200px;}  
+            .inner_main_menu ul li:hover a{color: #7c7c7c;}  
+            .inner_main_menu ul li:hover ul li a{color: #ffffff }  
+            .inner_main_menu ul li ul li a:hover{color: #262626}  
+            .inner_main_menu ul li ul li:hover a{background: #ddd; color: #262626;}  
+            .inner_main_menu ul li ul li:hover ul li a{background: #262626; color: #fff;}  
+            .inner_main_menu ul li ul li ul li a:hover{background: #ddd; color: #262626;}  
+            /* .slicknav_menu {
+              background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+              font-size: 16px;
+              padding: 5px;
+              display: none;    
+              position: fixed;
+              right: 0;
+              width: 100%;
+              z-index: 99999;
+            }
+            ul.slicknav_nav {
+              background: #262626 none repeat scroll 0 0;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 80%;
+            } */
+
+            /* .slicknav_btn {top: 35px;} */
+            #main_menu{width: 100%; position: relative;}
+            /* .logo_area{width: 300px; height: 200px; position: absolute; left: 46%; top: 0; content: ""; margin-left:-150px; text-align: center; } */
+            
+
+            @media only screen and (min-width: 468px) and (max-width: 1264px) { 
+                /* .logo_area{width: 200px; height: 200px; position: absolute; left: 46%; top: 0; content: ""; margin-left:-150px; text-align: center; }
+                .logo_element {
+                    height: auto;
+                    width: 16vw;
+                    padding-top: 17%;
+                 }        */
+            }
+            
+
+
+
+            @media only screen and (min-width: 200px) and (max-width: 467px) { 
+                .inner_main_menu {margin: 10px auto; width: auto; display: grid; grid-template-columns: 2fr 2fr;}    
+               
+
+                .center-this {position: absolute; left: 50%; -moz-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0) ;}
+                /* for center-ing the logo in the middle of view */
+                .inner_main_menu ul li a{color: #262626; font-size: 2.8vw; text-transform: uppercase;text-decoration: none; display: block;padding: 10px 3vw;} 
+                #menu-right{margin: 0 0 0 0; padding: 15% 0 0; display: flex;  justify-content: flex-start; } 
+                #menu-left{margin: 0 0 0 0; padding: 15% 0 0; display: flex;  justify-content: flex-end;} 
+                #image_pfir{
+                    position: absolute;
+                    top:0px;
+                    margin-top: 0px;
+                    /* background-image: url(florin_irimia.png); */
+                    height: 12vw;
+                    padding: 0 0 0 0;
+                }
+                /* .logo_area {height: auto;left: 0;margin-left: 0;position: relative;top: 0;width: 130px;} */
+                /* .logo_area img{height: auto;width: 100%;} */
+                
+                    
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main_menu">
+            <!-- <div class="logo_area">
+                <a  href=""><img class="logo_element" src="logo.png" width="auto" alt=""></a>
+            </div> -->
+            <div class="inner_main_menu">
+                <ul id="menu-left">
+                    <li><a href="">Home</a></li>
+                    <!-- <li><a href="">Despre</a></li> -->
+                    <li><a href="">Detalii</a>
+                        <ul>
+                            <li><a href="">Dropdown Menu</a></li>
+                            <li><a href="">Dropdown Menu</a>
+                                <ul>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Dropdown Menu</a></li>
+                            <li><a href="">Dropdown Menu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                 <img class="center-this" id="image_pfir" src="florin_irimia.png" >
+                <ul id="menu-right">
+                    
+                    <!-- <li class="logobass"> <a href=""> LOGO HERE</a> </li> -->
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">PFIRzen</a>
+                        <ul>
+                            <li><a href="">Dropdown Menu</a></li>
+                            <li><a href="">Dropdown Menu</a>
+                                <ul>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                    <li><a href="">Dropdown Sub Menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Dropdown Menu</a></li>
+                            <li><a href="">Dropdown Menu</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="">PORTOFOLIU</a></li> -->
+                </ul>
+            </div>
+        </div>
+        
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#menu').slicknav();
+        });
+    </script>
+    </body>
+</html>
